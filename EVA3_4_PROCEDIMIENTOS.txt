@@ -1,0 +1,417 @@
+MySQL Shell 8.0.35
+
+Copyright (c) 2016, 2023, Oracle and/or its affiliates.
+Oracle is a registered trademark of Oracle Corporation and/or its affiliates.
+Other names may be trademarks of their respective owners.
+
+Type '\help' or '\?' for help; '\quit' to exit.
+ MySQL  JS > \sql
+Switching to SQL mode... Commands end with ;
+ MySQL  SQL > \c mc-- root@localhost
+Creating a session to 'root@localhost'
+Please provide the password for 'root@localhost': **********
+Save password for 'root@localhost'? [Y]es/[N]o/Ne[v]er (default No): n
+Fetching global names for auto-completion... Press ^C to stop.
+Your MySQL connection id is 8 (X protocol)
+Server version: 8.0.35 MySQL Community Server - GPL
+No default schema selected; type \use <schema> to set one.
+ MySQL  localhost:33060+ ssl  SQL > use tbd_3;
+Default schema set to `tbd_3`.
+Fetching global names, object names from `tbd_3` for auto-completion... Press ^C to stop.
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > select consultar_actores
+                                        -> ;
+ERROR: 1054: Unknown column 'consultar_actores' in 'field list'
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > call consultar_actores ;
++----------+-------------+--------------+---------------------+
+| actor_id | first_name  | last_name    | last_update         |
++----------+-------------+--------------+---------------------+
+|        1 | PENELOPE    | GUINESS      | 2006-02-15 04:34:33 |
+|        2 | NICK        | WAHLBERG     | 2006-02-15 04:34:33 |
+|        3 | ED          | CHASE        | 2006-02-15 04:34:33 |
+|        4 | JENNIFER    | DAVIS        | 2006-02-15 04:34:33 |
+|        5 | JOHNNY      | LOLLOBRIGIDA | 2006-02-15 04:34:33 |
+|        6 | BETTE       | NICHOLSON    | 2006-02-15 04:34:33 |
+|        7 | GRACE       | MOSTEL       | 2006-02-15 04:34:33 |
+|        8 | MATTHEW     | JOHANSSON    | 2006-02-15 04:34:33 |
+|        9 | JOE         | SWANK        | 2006-02-15 04:34:33 |
+|       10 | CHRISTIAN   | GABLE        | 2006-02-15 04:34:33 |
+|       11 | ZERO        | CAGE         | 2006-02-15 04:34:33 |
+|       12 | KARL        | BERRY        | 2006-02-15 04:34:33 |
+|       13 | UMA         | WOOD         | 2006-02-15 04:34:33 |
+|       14 | VIVIEN      | BERGEN       | 2006-02-15 04:34:33 |
+|       15 | CUBA        | OLIVIER      | 2006-02-15 04:34:33 |
+|       16 | FRED        | COSTNER      | 2006-02-15 04:34:33 |
+|       17 | HELEN       | VOIGHT       | 2006-02-15 04:34:33 |
+|       18 | DAN         | TORN         | 2006-02-15 04:34:33 |
+|       19 | BOB         | FAWCETT      | 2006-02-15 04:34:33 |
+|       20 | LUCILLE     | TRACY        | 2006-02-15 04:34:33 |
+|       21 | KIRSTEN     | PALTROW      | 2006-02-15 04:34:33 |
+|       22 | ELVIS       | MARX         | 2006-02-15 04:34:33 |
+|       23 | SANDRA      | KILMER       | 2006-02-15 04:34:33 |
+|       24 | CAMERON     | STREEP       | 2006-02-15 04:34:33 |
+|       25 | KEVIN       | BLOOM        | 2006-02-15 04:34:33 |
+|       26 | RIP         | CRAWFORD     | 2006-02-15 04:34:33 |
+|       27 | JULIA       | MCQUEEN      | 2006-02-15 04:34:33 |
+|       28 | WOODY       | HOFFMAN      | 2006-02-15 04:34:33 |
+|       29 | ALEC        | WAYNE        | 2006-02-15 04:34:33 |
+|       30 | SANDRA      | PECK         | 2006-02-15 04:34:33 |
+|       31 | SISSY       | SOBIESKI     | 2006-02-15 04:34:33 |
+|       32 | TIM         | HACKMAN      | 2006-02-15 04:34:33 |
+|       33 | MILLA       | PECK         | 2006-02-15 04:34:33 |
+|       34 | AUDREY      | OLIVIER      | 2006-02-15 04:34:33 |
+|       35 | JUDY        | DEAN         | 2006-02-15 04:34:33 |
+|       36 | BURT        | DUKAKIS      | 2006-02-15 04:34:33 |
+|       37 | VAL         | BOLGER       | 2006-02-15 04:34:33 |
+|       38 | TOM         | MCKELLEN     | 2006-02-15 04:34:33 |
+|       39 | GOLDIE      | BRODY        | 2006-02-15 04:34:33 |
+|       40 | JOHNNY      | CAGE         | 2006-02-15 04:34:33 |
+|       41 | JODIE       | DEGENERES    | 2006-02-15 04:34:33 |
+|       42 | TOM         | MIRANDA      | 2006-02-15 04:34:33 |
+|       43 | KIRK        | JOVOVICH     | 2006-02-15 04:34:33 |
+|       44 | NICK        | STALLONE     | 2006-02-15 04:34:33 |
+|       45 | REESE       | KILMER       | 2006-02-15 04:34:33 |
+|       46 | PARKER      | GOLDBERG     | 2006-02-15 04:34:33 |
+|       47 | JULIA       | BARRYMORE    | 2006-02-15 04:34:33 |
+|       48 | FRANCES     | DAY-LEWIS    | 2006-02-15 04:34:33 |
+|       49 | ANNE        | CRONYN       | 2006-02-15 04:34:33 |
+|       50 | NATALIE     | HOPKINS      | 2006-02-15 04:34:33 |
+|       51 | GARY        | PHOENIX      | 2006-02-15 04:34:33 |
+|       52 | CARMEN      | HUNT         | 2006-02-15 04:34:33 |
+|       53 | MENA        | TEMPLE       | 2006-02-15 04:34:33 |
+|       54 | PENELOPE    | PINKETT      | 2006-02-15 04:34:33 |
+|       55 | FAY         | KILMER       | 2006-02-15 04:34:33 |
+|       56 | DAN         | HARRIS       | 2006-02-15 04:34:33 |
+|       57 | JUDE        | CRUISE       | 2006-02-15 04:34:33 |
+|       58 | CHRISTIAN   | AKROYD       | 2006-02-15 04:34:33 |
+|       59 | DUSTIN      | TAUTOU       | 2006-02-15 04:34:33 |
+|       60 | HENRY       | BERRY        | 2006-02-15 04:34:33 |
+|       61 | CHRISTIAN   | NEESON       | 2006-02-15 04:34:33 |
+|       62 | JAYNE       | NEESON       | 2006-02-15 04:34:33 |
+|       63 | CAMERON     | WRAY         | 2006-02-15 04:34:33 |
+|       64 | RAY         | JOHANSSON    | 2006-02-15 04:34:33 |
+|       65 | ANGELA      | HUDSON       | 2006-02-15 04:34:33 |
+|       66 | MARY        | TANDY        | 2006-02-15 04:34:33 |
+|       67 | JESSICA     | BAILEY       | 2006-02-15 04:34:33 |
+|       68 | RIP         | WINSLET      | 2006-02-15 04:34:33 |
+|       69 | KENNETH     | PALTROW      | 2006-02-15 04:34:33 |
+|       70 | MICHELLE    | MCCONAUGHEY  | 2006-02-15 04:34:33 |
+|       71 | ADAM        | GRANT        | 2006-02-15 04:34:33 |
+|       72 | SEAN        | WILLIAMS     | 2006-02-15 04:34:33 |
+|       73 | GARY        | PENN         | 2006-02-15 04:34:33 |
+|       74 | MILLA       | KEITEL       | 2006-02-15 04:34:33 |
+|       75 | BURT        | POSEY        | 2006-02-15 04:34:33 |
+|       76 | ANGELINA    | ASTAIRE      | 2006-02-15 04:34:33 |
+|       77 | CARY        | MCCONAUGHEY  | 2006-02-15 04:34:33 |
+|       78 | GROUCHO     | SINATRA      | 2006-02-15 04:34:33 |
+|       79 | MAE         | HOFFMAN      | 2006-02-15 04:34:33 |
+|       80 | RALPH       | CRUZ         | 2006-02-15 04:34:33 |
+|       81 | SCARLETT    | DAMON        | 2006-02-15 04:34:33 |
+|       82 | WOODY       | JOLIE        | 2006-02-15 04:34:33 |
+|       83 | BEN         | WILLIS       | 2006-02-15 04:34:33 |
+|       84 | JAMES       | PITT         | 2006-02-15 04:34:33 |
+|       85 | MINNIE      | ZELLWEGER    | 2006-02-15 04:34:33 |
+|       86 | GREG        | CHAPLIN      | 2006-02-15 04:34:33 |
+|       87 | SPENCER     | PECK         | 2006-02-15 04:34:33 |
+|       88 | KENNETH     | PESCI        | 2006-02-15 04:34:33 |
+|       89 | CHARLIZE    | DENCH        | 2006-02-15 04:34:33 |
+|       90 | SEAN        | GUINESS      | 2006-02-15 04:34:33 |
+|       91 | CHRISTOPHER | BERRY        | 2006-02-15 04:34:33 |
+|       92 | KIRSTEN     | AKROYD       | 2006-02-15 04:34:33 |
+|       93 | ELLEN       | PRESLEY      | 2006-02-15 04:34:33 |
+|       94 | KENNETH     | TORN         | 2006-02-15 04:34:33 |
+|       95 | DARYL       | WAHLBERG     | 2006-02-15 04:34:33 |
+|       96 | GENE        | WILLIS       | 2006-02-15 04:34:33 |
+|       97 | MEG         | HAWKE        | 2006-02-15 04:34:33 |
+|       98 | CHRIS       | BRIDGES      | 2006-02-15 04:34:33 |
+|       99 | JIM         | MOSTEL       | 2006-02-15 04:34:33 |
+|      100 | SPENCER     | DEPP         | 2006-02-15 04:34:33 |
+|      101 | SUSAN       | DAVIS        | 2006-02-15 04:34:33 |
+|      102 | WALTER      | TORN         | 2006-02-15 04:34:33 |
+|      103 | MATTHEW     | LEIGH        | 2006-02-15 04:34:33 |
+|      104 | PENELOPE    | CRONYN       | 2006-02-15 04:34:33 |
+|      105 | SIDNEY      | CROWE        | 2006-02-15 04:34:33 |
+|      106 | GROUCHO     | DUNST        | 2006-02-15 04:34:33 |
+|      107 | GINA        | DEGENERES    | 2006-02-15 04:34:33 |
+|      108 | WARREN      | NOLTE        | 2006-02-15 04:34:33 |
+|      109 | SYLVESTER   | DERN         | 2006-02-15 04:34:33 |
+|      110 | SUSAN       | DAVIS        | 2006-02-15 04:34:33 |
+|      111 | CAMERON     | ZELLWEGER    | 2006-02-15 04:34:33 |
+|      112 | RUSSELL     | BACALL       | 2006-02-15 04:34:33 |
+|      113 | MORGAN      | HOPKINS      | 2006-02-15 04:34:33 |
+|      114 | MORGAN      | MCDORMAND    | 2006-02-15 04:34:33 |
+|      115 | HARRISON    | BALE         | 2006-02-15 04:34:33 |
+|      116 | DAN         | STREEP       | 2006-02-15 04:34:33 |
+|      117 | RENEE       | TRACY        | 2006-02-15 04:34:33 |
+|      118 | CUBA        | ALLEN        | 2006-02-15 04:34:33 |
+|      119 | WARREN      | JACKMAN      | 2006-02-15 04:34:33 |
+|      120 | PENELOPE    | MONROE       | 2006-02-15 04:34:33 |
+|      121 | LIZA        | BERGMAN      | 2006-02-15 04:34:33 |
+|      122 | SALMA       | NOLTE        | 2006-02-15 04:34:33 |
+|      123 | JULIANNE    | DENCH        | 2006-02-15 04:34:33 |
+|      124 | SCARLETT    | BENING       | 2006-02-15 04:34:33 |
+|      125 | ALBERT      | NOLTE        | 2006-02-15 04:34:33 |
+|      126 | FRANCES     | TOMEI        | 2006-02-15 04:34:33 |
+|      127 | KEVIN       | GARLAND      | 2006-02-15 04:34:33 |
+|      128 | CATE        | MCQUEEN      | 2006-02-15 04:34:33 |
+|      129 | DARYL       | CRAWFORD     | 2006-02-15 04:34:33 |
+|      130 | GRETA       | KEITEL       | 2006-02-15 04:34:33 |
+|      131 | JANE        | JACKMAN      | 2006-02-15 04:34:33 |
+|      132 | ADAM        | HOPPER       | 2006-02-15 04:34:33 |
+|      133 | RICHARD     | PENN         | 2006-02-15 04:34:33 |
+|      134 | GENE        | HOPKINS      | 2006-02-15 04:34:33 |
+|      135 | RITA        | REYNOLDS     | 2006-02-15 04:34:33 |
+|      136 | ED          | MANSFIELD    | 2006-02-15 04:34:33 |
+|      137 | MORGAN      | WILLIAMS     | 2006-02-15 04:34:33 |
+|      138 | LUCILLE     | DEE          | 2006-02-15 04:34:33 |
+|      139 | EWAN        | GOODING      | 2006-02-15 04:34:33 |
+|      140 | WHOOPI      | HURT         | 2006-02-15 04:34:33 |
+|      141 | CATE        | HARRIS       | 2006-02-15 04:34:33 |
+|      142 | JADA        | RYDER        | 2006-02-15 04:34:33 |
+|      143 | RIVER       | DEAN         | 2006-02-15 04:34:33 |
+|      144 | ANGELA      | WITHERSPOON  | 2006-02-15 04:34:33 |
+|      145 | KIM         | ALLEN        | 2006-02-15 04:34:33 |
+|      146 | ALBERT      | JOHANSSON    | 2006-02-15 04:34:33 |
+|      147 | FAY         | WINSLET      | 2006-02-15 04:34:33 |
+|      148 | EMILY       | DEE          | 2006-02-15 04:34:33 |
+|      149 | RUSSELL     | TEMPLE       | 2006-02-15 04:34:33 |
+|      150 | JAYNE       | NOLTE        | 2006-02-15 04:34:33 |
+|      151 | GEOFFREY    | HESTON       | 2006-02-15 04:34:33 |
+|      152 | BEN         | HARRIS       | 2006-02-15 04:34:33 |
+|      153 | MINNIE      | KILMER       | 2006-02-15 04:34:33 |
+|      154 | MERYL       | GIBSON       | 2006-02-15 04:34:33 |
+|      155 | IAN         | TANDY        | 2006-02-15 04:34:33 |
+|      156 | FAY         | WOOD         | 2006-02-15 04:34:33 |
+|      157 | GRETA       | MALDEN       | 2006-02-15 04:34:33 |
+|      158 | VIVIEN      | BASINGER     | 2006-02-15 04:34:33 |
+|      159 | LAURA       | BRODY        | 2006-02-15 04:34:33 |
+|      160 | CHRIS       | DEPP         | 2006-02-15 04:34:33 |
+|      161 | HARVEY      | HOPE         | 2006-02-15 04:34:33 |
+|      162 | OPRAH       | KILMER       | 2006-02-15 04:34:33 |
+|      163 | CHRISTOPHER | WEST         | 2006-02-15 04:34:33 |
+|      164 | HUMPHREY    | WILLIS       | 2006-02-15 04:34:33 |
+|      165 | AL          | GARLAND      | 2006-02-15 04:34:33 |
+|      166 | NICK        | DEGENERES    | 2006-02-15 04:34:33 |
+|      167 | LAURENCE    | BULLOCK      | 2006-02-15 04:34:33 |
+|      168 | WILL        | WILSON       | 2006-02-15 04:34:33 |
+|      169 | KENNETH     | HOFFMAN      | 2006-02-15 04:34:33 |
+|      170 | MENA        | HOPPER       | 2006-02-15 04:34:33 |
+|      171 | OLYMPIA     | PFEIFFER     | 2006-02-15 04:34:33 |
+|      172 | GROUCHO     | WILLIAMS     | 2006-02-15 04:34:33 |
+|      173 | ALAN        | DREYFUSS     | 2006-02-15 04:34:33 |
+|      174 | MICHAEL     | BENING       | 2006-02-15 04:34:33 |
+|      175 | WILLIAM     | HACKMAN      | 2006-02-15 04:34:33 |
+|      176 | JON         | CHASE        | 2006-02-15 04:34:33 |
+|      177 | GENE        | MCKELLEN     | 2006-02-15 04:34:33 |
+|      178 | LISA        | MONROE       | 2006-02-15 04:34:33 |
+|      179 | ED          | GUINESS      | 2006-02-15 04:34:33 |
+|      180 | JEFF        | SILVERSTONE  | 2006-02-15 04:34:33 |
+|      181 | MATTHEW     | CARREY       | 2006-02-15 04:34:33 |
+|      182 | DEBBIE      | AKROYD       | 2006-02-15 04:34:33 |
+|      183 | RUSSELL     | CLOSE        | 2006-02-15 04:34:33 |
+|      184 | HUMPHREY    | GARLAND      | 2006-02-15 04:34:33 |
+|      185 | MICHAEL     | BOLGER       | 2006-02-15 04:34:33 |
+|      186 | JULIA       | ZELLWEGER    | 2006-02-15 04:34:33 |
+|      187 | RENEE       | BALL         | 2006-02-15 04:34:33 |
+|      188 | ROCK        | DUKAKIS      | 2006-02-15 04:34:33 |
+|      189 | CUBA        | BIRCH        | 2006-02-15 04:34:33 |
+|      190 | AUDREY      | BAILEY       | 2006-02-15 04:34:33 |
+|      191 | GREGORY     | GOODING      | 2006-02-15 04:34:33 |
+|      192 | JOHN        | SUVARI       | 2006-02-15 04:34:33 |
+|      193 | BURT        | TEMPLE       | 2006-02-15 04:34:33 |
+|      194 | MERYL       | ALLEN        | 2006-02-15 04:34:33 |
+|      195 | JAYNE       | SILVERSTONE  | 2006-02-15 04:34:33 |
+|      196 | BELA        | WALKEN       | 2006-02-15 04:34:33 |
+|      197 | REESE       | WEST         | 2006-02-15 04:34:33 |
+|      198 | MARY        | KEITEL       | 2006-02-15 04:34:33 |
+|      199 | JULIA       | FAWCETT      | 2006-02-15 04:34:33 |
+|      200 | THORA       | TEMPLE       | 2006-02-15 04:34:33 |
+|      202 | GUSTAV      | MAXWELL      | 2023-11-08 17:51:23 |
+|      203 | GUSTAV      | MAXWELL      | 2023-11-08 17:52:26 |
+|      204 | GUSTAV      | MAXWELL      | 2023-11-08 17:53:13 |
+|      205 | GUSTAV      | MAXWELL      | 2023-11-08 17:53:26 |
+|      206 | GUSTAV      | MAXWELL      | 2023-11-09 17:30:33 |
+|      207 | GUSTAV      | MAXWELL      | 2023-11-09 17:31:06 |
+|      208 | GUSTAV      | MAXWELL      | 2023-11-09 17:31:51 |
+|      209 | GUSTAV      | MAXWELL      | 2023-11-09 17:33:58 |
+|      210 | GUSTAV      | MAXWELL      | 2023-11-09 17:33:58 |
+|      211 | GUSTAV      | MAXWELL      | 2023-11-09 17:34:29 |
+|      212 | GUSTAV      | MAXWELL      | 2023-11-09 17:34:29 |
+|      213 | GUSTAV      | MAXWELL      | 2023-11-09 17:41:42 |
+|      214 | GUSTAV      | MAXWELL      | 2023-11-09 17:43:06 |
+|      215 | GUSTAV      | MAXWELL      | 2023-11-09 22:12:45 |
+|      216 | GUSTAV      | MAXWELL      | 2023-11-09 22:15:22 |
+|      217 | GUSTAV      | MAXWELL      | 2023-11-09 22:15:44 |
+|      218 | GUSTAV      | MAXWELL      | 2023-11-09 22:17:49 |
+|      219 | GUSTAV      | MAXWELL      | 2023-11-09 22:18:09 |
+|      220 | GUSTAV      | MAXWELL      | 2023-11-09 22:18:22 |
+|      221 | GUSTAV      | MAXWELL      | 2023-11-09 22:18:29 |
+|      222 | GUSTAV      | MAXWELL      | 2023-11-09 22:20:34 |
+|      223 | GUSTAV      | MAXWELL      | 2023-11-09 22:25:25 |
+|      224 | GUSTAV      | MAXWELL      | 2023-11-09 22:25:39 |
+|      225 | GUSTAV      | MAXWELL      | 2023-11-09 22:26:05 |
+|      226 | GUSTAV      | MAXWELL      | 2023-11-09 22:26:59 |
+|      227 | GUSTAV      | MAXWELL      | 2023-11-09 22:27:37 |
+|      228 | GUSTAV      | MAXWELL      | 2023-11-09 22:31:29 |
+|      229 | GUSTAV      | MAXWELL      | 2023-11-09 22:31:41 |
+|      230 | GUSTAV      | MAXWELL      | 2023-11-09 22:32:01 |
+|      231 | GUSTAV      | MAXWELL      | 2023-11-09 22:33:42 |
+|      232 | GUSTAV      | MAXWELL      | 2023-11-09 22:37:11 |
+|      233 | GUSTAV      | MAXWELL      | 2023-11-09 22:37:27 |
+|      234 | GUSTAV      | MAXWELL      | 2023-11-09 22:37:49 |
+|      235 | GUSTAV      | MAXWELL      | 2023-11-09 22:39:48 |
+|      236 | GUSTAV      | MAXWELL      | 2023-11-09 22:40:20 |
+|      237 | GUSTAV      | MAXWELL      | 2023-11-09 22:41:17 |
+|      238 | GUSTAV      | MAXWELL      | 2023-11-09 22:42:21 |
+|      239 | GUSTAV      | MAXWELL      | 2023-11-09 22:44:36 |
+|      240 | GUSTAV      | MAXWELL      | 2023-11-09 22:44:53 |
+|      241 | GUSTAV      | MAXWELL      | 2023-11-09 22:45:13 |
+|      242 | GUSTAV      | MAXWELL      | 2023-11-09 22:46:21 |
+|      243 | GUSTAV      | MAXWELL      | 2023-11-09 22:47:33 |
+|      244 | GUSTAV      | MAXWELL      | 2023-11-09 22:48:48 |
+|      245 | GUSTAV      | MAXWELL      | 2023-11-09 22:49:12 |
+|      246 | GUSTAV      | MAXWELL      | 2023-11-09 22:50:21 |
+|      247 | GUSTAV      | MAXWELL      | 2023-11-09 22:51:05 |
+|      248 | GUSTAV      | MAXWELL      | 2023-11-09 22:52:20 |
+|      249 | GUSTAV      | MAXWELL      | 2023-11-09 22:52:20 |
+|      250 | GUSTAV      | MAXWELL      | 2023-11-09 22:52:35 |
+|      251 | GUSTAV      | MAXWELL      | 2023-11-09 22:53:13 |
+|      252 | GUSTAV      | MAXWELL      | 2023-11-09 22:54:26 |
+|      253 | GUSTAV      | MAXWELL      | 2023-11-09 22:54:26 |
+|      254 | GUSTAV      | MAXWELL      | 2023-11-09 22:54:32 |
+|      255 | GUSTAV      | MAXWELL      | 2023-11-09 22:54:45 |
+|      256 | GUSTAV      | MAXWELL      | 2023-11-09 22:56:51 |
+|      257 | GUSTAV      | MAXWELL      | 2023-11-09 22:56:51 |
+|      258 | GUSTAV      | MAXWELL      | 2023-11-09 22:56:51 |
+|      259 | GUSTAV      | MAXWELL      | 2023-11-09 22:58:05 |
+|      260 | GUSTAV      | MAXWELL      | 2023-11-09 23:08:28 |
+|      261 | GUSTAV      | MAXWELL      | 2023-11-09 23:08:59 |
+|      262 | GUSTAV      | MAXWELL      | 2023-11-09 23:11:14 |
+|      263 | GUSTAV      | MAXWELL      | 2023-11-09 23:11:56 |
+|      264 | GUSTAV      | MAXWELL      | 2023-11-09 23:13:03 |
+|      265 | GUSTAV      | MAXWELL      | 2023-11-09 23:13:03 |
+|      266 | GUSTAV      | MAXWELL      | 2023-11-09 23:15:31 |
+|      267 | GUSTAV      | MAXWELL      | 2023-11-09 23:18:54 |
+|      268 | GUSTAV      | MAXWELL      | 2023-11-09 23:19:15 |
+|      269 | a           | b            | 2024-04-22 17:49:01 |
++----------+-------------+--------------+---------------------+
+268 rows in set (0.0204 sec)
+
+Query OK, 0 rows affected (0.0204 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > call consultar_actores limit 10;
+ERROR: 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 10' at line 1
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > call consultar_actores limit =10;
+ERROR: 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit =10' at line 1
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > drop procedure consultar_actores();
+ERROR: 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '()' at line 1
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > drop procedure consultar_actores;
+Query OK, 0 rows affected (0.0073 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > call consultar_actor(204);
+ERROR: 1305: PROCEDURE tbd_3.consultar_actor does not exist
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > call consultar_actore(204);
++----------+------------+-----------+---------------------+
+| actor_id | first_name | last_name | last_update         |
++----------+------------+-----------+---------------------+
+|      204 | GUSTAV     | MAXWELL   | 2023-11-08 17:53:13 |
++----------+------------+-----------+---------------------+
+1 row in set (0.0012 sec)
+
+Query OK, 0 rows affected (0.0012 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > call conter_actores(@cant);
+ERROR: 1305: PROCEDURE tbd_3.conter_actores does not exist
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > call contar_actores(@cant);
++----------+
+| count(*) |
++----------+
+|      268 |
++----------+
+1 row in set (0.0085 sec)
+
+Query OK, 0 rows affected (0.0085 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > drop procedure contar_actores;
+Query OK, 0 rows affected (0.0070 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > call conter_actores(@cant);
+ERROR: 1305: PROCEDURE tbd_3.conter_actores does not exist
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > call contar_actores(@cant);
+Query OK, 1 row affected (0.0022 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > @cant
+                                        -> ;
+ERROR: 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@cant' at line 1
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > select @cant;
++-------+
+| @cant |
++-------+
+|   268 |
++-------+
+1 row in set (0.0008 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > call consultar_num_actores(maxwell);
+ERROR: 1054: Unknown column 'maxwell' in 'field list'
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > call consultar_num_actores('maxwell');
+ERROR: 1366: Incorrect integer value: 'maxwell' for column 'apellido' at row 1
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > call consultar_num_actores(120);
++----------+------------+-----------+---------------------+
+| actor_id | first_name | last_name | last_update         |
++----------+------------+-----------+---------------------+
+|      120 | PENELOPE   | MONROE    | 2006-02-15 04:34:33 |
++----------+------------+-----------+---------------------+
+1 row in set (0.0053 sec)
+
++-----------------+
+| count(apellido) |
++-----------------+
+|             268 |
++-----------------+
+1 row in set (0.0053 sec)
+
+Query OK, 0 rows affected (0.0053 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > drop procedure contar_num_actores;;
+ERROR: 1305: PROCEDURE tbd_3.contar_num_actores does not exist
+ERROR: 1065: Query was empty
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > drop procedure consultar_num_actores;
+Query OK, 0 rows affected (0.0125 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > call consultar_num_actores('maxwell');
+ERROR: 1414: OUT or INOUT argument 1 for routine tbd_3.consultar_num_actores is not a variable or NEW pseudo-variable in BEFORE trigger
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > call consultar_num_actores('maxwell',@cant);
+ERROR: 1318: Incorrect number of arguments for PROCEDURE tbd_3.consultar_num_actores; expected 1, got 2
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > drop procedure consultar_num_actores;
+Query OK, 0 rows affected (0.0103 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > call consultar_num_actores('maxwell',@cant);
+ERROR: 1318: Incorrect number of arguments for PROCEDURE tbd_3.consultar_num_actores; expected 1, got 2
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > drop procedure consultar_num_actores;
+Query OK, 0 rows affected (0.0320 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > call consultar_num_actores('maxwell',@cant);
+Query OK, 1 row affected (0.0062 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > select @cant;
++-------+
+| @cant |
++-------+
+|    67 |
++-------+
+1 row in set (0.0005 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > call agregar_actor('b','a');
+ERROR: 1305: PROCEDURE tbd_3.agregar_actor does not exist
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > call agregar_actor('b','a');
+Query OK, 1 row affected (0.0122 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > select * from actor where actor_id=269;
++----------+------------+-----------+---------------------+
+| actor_id | first_name | last_name | last_update         |
++----------+------------+-----------+---------------------+
+|      269 | a          | b         | 2024-04-22 17:49:01 |
++----------+------------+-----------+---------------------+
+1 row in set (0.0008 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > select * from actor where actor_id=270;
++----------+------------+-----------+---------------------+
+| actor_id | first_name | last_name | last_update         |
++----------+------------+-----------+---------------------+
+|      270 | b          | a         | 2024-04-23 17:42:36 |
++----------+------------+-----------+---------------------+
+1 row in set (0.0007 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > call agregar_actor('Un','Vato');
+Query OK, 1 row affected (0.0304 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > select * from actor where actor_id=271;
++----------+------------+-----------+---------------------+
+| actor_id | first_name | last_name | last_update         |
++----------+------------+-----------+---------------------+
+|      271 | Un         | Vato      | 2024-04-23 17:43:48 |
++----------+------------+-----------+---------------------+
+1 row in set (0.0007 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL >
