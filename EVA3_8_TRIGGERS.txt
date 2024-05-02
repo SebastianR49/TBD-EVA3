@@ -1,0 +1,136 @@
+MySQL Shell 8.0.35
+
+Copyright (c) 2016, 2023, Oracle and/or its affiliates.
+Oracle is a registered trademark of Oracle Corporation and/or its affiliates.
+Other names may be trademarks of their respective owners.
+
+Type '\help' or '\?' for help; '\quit' to exit.
+ MySQL  JS > \sql
+Switching to SQL mode... Commands end with ;
+ MySQL  SQL > \c mc-- root@loclahost
+Creating a session to 'root@loclahost'
+Please provide the password for 'root@loclahost': **********
+MySQL Error 2005: No such host is known 'loclahost'
+ MySQL  SQL > ;
+ERROR: Not connected.
+ MySQL  SQL > \c mc-- root@localhost
+Creating a session to 'root@localhost'
+Please provide the password for 'root@localhost': **********
+Save password for 'root@localhost'? [Y]es/[N]o/Ne[v]er (default No): n
+Fetching global names for auto-completion... Press ^C to stop.
+Your MySQL connection id is 8 (X protocol)
+Server version: 8.0.35 MySQL Community Server - GPL
+No default schema selected; type \use <schema> to set one.
+ MySQL  localhost:33060+ ssl  SQL > use tbd_3;
+Default schema set to `tbd_3`.
+Fetching global names, object names from `tbd_3` for auto-completion... Press ^C to stop.
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > show tables
+                                        -> ;
++-----------------+
+| Tables_in_tbd_3 |
++-----------------+
+| account         |
+| actor           |
+| bitacora        |
++-----------------+
+3 rows in set (0.0018 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > select * from actor limit 5;
++----------+------------+--------------+---------------------+----------------------------+
+| actor_id | first_name | last_name    | last_update         | email                      |
++----------+------------+--------------+---------------------+----------------------------+
+|        1 | PENELOPE   | GUINESS      | 2024-04-29 09:42:25 | e1.GUINESS@correo.com      |
+|        2 | NICK       | WAHLBERG     | 2024-04-29 09:42:25 | e2.WAHLBERG@correo.com     |
+|        3 | ED         | CHASE        | 2024-04-29 09:42:25 | e3.CHASE@correo.com        |
+|        4 | JENNIFER   | DAVIS        | 2024-04-29 09:42:25 | e4.DAVIS@correo.com        |
+|        5 | JOHNNY     | LOLLOBRIGIDA | 2024-04-29 09:42:25 | e5.LOLLOBRIGIDA@correo.com |
++----------+------------+--------------+---------------------+----------------------------+
+5 rows in set (0.0200 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > desc actor;
++-------------+-------------------+------+-----+-------------------+-----------------------------------------------+
+| Field       | Type              | Null | Key | Default           | Extra                                         |
++-------------+-------------------+------+-----+-------------------+-----------------------------------------------+
+| actor_id    | smallint unsigned | NO   | PRI | NULL              | auto_increment                                |
+| first_name  | varchar(45)       | NO   |     | NULL              |                                               |
+| last_name   | varchar(45)       | NO   | MUL | NULL              |                                               |
+| last_update | timestamp         | NO   |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED on update CURRENT_TIMESTAMP |
+| email       | varchar(50)       | NO   |     | NULL              |                                               |
++-------------+-------------------+------+-----+-------------------+-----------------------------------------------+
+5 rows in set (0.0292 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > insert into actor(first_name, last_name)
+                                        -> value ('Juan', 'Perez Jolote');
+ERROR: 1305: FUNCTION tbd_3.generar_actoid does not exist
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > insert into actor(first_name, last_name) value ('Juan', 'Perez Jolote');
+ERROR: 1305: FUNCTION tbd_3.generar_actoid does not exist
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > insert into actor(first_name, last_name) value ('Juan', 'Perez Jolote');
+ERROR: 1364: Field 'email' doesn't have a default value
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > alter table actor drop column email;
+Query OK, 0 rows affected (0.0328 sec)
+
+Records: 0  Duplicates: 0  Warnings: 0
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > desc actor;
++-------------+-------------------+------+-----+-------------------+-----------------------------------------------+
+| Field       | Type              | Null | Key | Default           | Extra                                         |
++-------------+-------------------+------+-----+-------------------+-----------------------------------------------+
+| actor_id    | smallint unsigned | NO   | PRI | NULL              | auto_increment                                |
+| first_name  | varchar(45)       | NO   |     | NULL              |                                               |
+| last_name   | varchar(45)       | NO   | MUL | NULL              |                                               |
+| last_update | timestamp         | NO   |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED on update CURRENT_TIMESTAMP |
++-------------+-------------------+------+-----+-------------------+-----------------------------------------------+
+4 rows in set (0.0031 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > insert into actor(first_name, last_name) value ('Juan', 'Perez Jolote');
+Query OK, 1 row affected (0.0145 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > alter table actor drop ;
+ERROR: 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > alter table actor delete from actor ;
+ERROR: 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'delete from actor' at line 1
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > delete from actor;
+Query OK, 271 rows affected (0.0168 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > desc actor;
++-------------+-------------------+------+-----+-------------------+-----------------------------------------------+
+| Field       | Type              | Null | Key | Default           | Extra                                         |
++-------------+-------------------+------+-----+-------------------+-----------------------------------------------+
+| actor_id    | smallint unsigned | NO   | PRI | NULL              | auto_increment                                |
+| first_name  | varchar(45)       | NO   |     | NULL              |                                               |
+| last_name   | varchar(45)       | NO   | MUL | NULL              |                                               |
+| last_update | timestamp         | NO   |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED on update CURRENT_TIMESTAMP |
++-------------+-------------------+------+-----+-------------------+-----------------------------------------------+
+4 rows in set (0.0021 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > select * from actor limit 5;
+Empty set (0.0007 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > insert into actor(first_name, last_name) value ('Juan', 'Perez Jolote');
+ERROR: 1054: Unknown column 'actor_id' in 'field list'
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > insert into actor(first_name, last_name) value ('Juan', 'Perez Jolote');
+Query OK, 1 row affected (0.0335 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > select * from actor limit 5;
++----------+------------+--------------+---------------------+
+| actor_id | first_name | last_name    | last_update         |
++----------+------------+--------------+---------------------+
+|      273 | Juan       | Perez Jolote | 2024-05-02 17:50:10 |
++----------+------------+--------------+---------------------+
+1 row in set (0.0007 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > select generar_actorid();
++-------------------+
+| generar_actorid() |
++-------------------+
+|               274 |
++-------------------+
+1 row in set (0.0011 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > delete from actor;
+Query OK, 1 row affected (0.0097 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > select generar_actorid();
++-------------------+
+| generar_actorid() |
++-------------------+
+|              NULL |
++-------------------+
+1 row in set (0.0007 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > insert into actor(first_name, last_name) value ('Juan', 'Perez Jolote');
+Query OK, 1 row affected (0.0100 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL > select * from actor limit 5;
++----------+------------+--------------+---------------------+
+| actor_id | first_name | last_name    | last_update         |
++----------+------------+--------------+---------------------+
+|      274 | Juan       | Perez Jolote | 2024-05-02 17:52:31 |
++----------+------------+--------------+---------------------+
+1 row in set (0.0008 sec)
+ MySQL  localhost:33060+ ssl  tbd_3  SQL >
